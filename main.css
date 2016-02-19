@@ -1,0 +1,29 @@
+body {
+  font: 1em "Open Sans", sans-serif;
+}
+
+.page {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#avatar {
+  width: 300px;
+  margin: 8px;
+  padding: 4px;
+  border: 1px solid black;
+
+  display: inline-block;
+}
+
+#avatar #avatar-bio p {
+  margin: 4px 0;
+}
+
+#music-featured {
+  display: inline-block;
+}
+
+#video-featured {
+
+}

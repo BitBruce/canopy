@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Project Canopy - Prototype | v0.1.0</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -9,27 +10,33 @@
 
   <div class="page">
 
-    <div class="panel avatar">
+    <div class="panel" id="avatar">
       <div class="pane">
-        <div class="avatar-image">
+        <div id="avatar-image">
           <img src="" alt="" class="avatar">
         </div>
-        <div class="avatar-bio">
+        <div id="avatar-bio">
           <h2 class="name">Bruce Robinson</h2>
-          <span class="loc">Richmond, VA, USA</span>
-          <span class="birthday">Dec. 7 1994 <span class="age">[Age: 21]</span></span>
-          <span class="prof">Java Web Developer, Computer Science student</span>
-          <span class="interests">Music, Games, Programming, Science, History, Politics, Philosophy</span>
+          <p class="loc">Richmond, VA, USA</p>
+          <p class="birthday">Dec. 7 1994 <span class="age">[Age: 21]</span></p>
+          <p class="prof">Java Web Developer, Computer Science student</p>
+          <p class="interests">Music, Games, Programming, Science, History, Politics, Philosophy</p>
         </div>
       </div>
     </div>
 
-    <div class="panel music">
+    <div class="panel" id="music-featured">
       <div class="pane">
         <div class="music-player">
-          <div id="soundcloud">
+          <div id="soundcloud"></div>
+        </div>
+      </div>
+    </div>
 
-          </div>
+    <div class="panel" id="video-featured">
+      <div class="pane">
+        <div class="video-player">
+          <div id="youtube"></div>
         </div>
       </div>
     </div>
@@ -39,16 +46,7 @@
 
   <!-- scripts -->
   <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
-  <script>
-  SC.initialize({
-    client_id: '4eaca5a5564f25e7afc7b242b4e300a0'
-  });
-
-  var track_url = 'https://soundcloud.com/conveyor94/power-base';
-  SC.oEmbed(track_url, { auto_play: true, element: document.getElementById('soundcloud') }).then(function(oEmbed) {
-    console.log('oEmbed response: ', oEmbed);
-  });
-  </script>
-
+  <script src="soundcloud.js"></script>
+  <script src="youtube.js"></script>
 </body>
 </html>
